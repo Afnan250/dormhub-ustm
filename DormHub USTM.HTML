@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DormHub USTM</title>
+    <link rel="stylesheet" href="DormHub USTM.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo"> 🏨 DormHub USTM</div>
+
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Students</a></li>
+            <li><a href="#">Rooms</a></li>
+            <li><a href="#">Complaints</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hostel Management System</h1>
+            <p>Manage Students, Manage Rooms, Complaints, Entry & Exit Records</p>
+            <button>Explore More</button>
+        </div>
+    </section>
+
+    <section class="dashboard">
+
+        <div class="card">
+            <h2>Current Hostellers</h2>
+            <p>Total Students = 250</p>
+        </div>
+
+        <div class="card">
+            <h2>Available Rooms</h2>
+            <p>Available Rooms = 35</p>
+        </div>
+
+        <div class="card">
+            <h2>Complaints</h2>
+            <p>12</p>
+        </div>
+
+        <div class="card">
+            <h2>Mess Menu</h2>
+            <p>Updated</p>
+        </div>
+
+    </section>
+
+    <section class="table-section">
+
+        <h2>Student Details</h2>
+
+        <table>
+		
+		 <form>
+		 
+		    <input type="int" placeholder="Student ID" required>
+
+            <input type="text" placeholder="Student Name" required>
+
+            <input type="text" placeholder="Room Number" required>
+
+            <input type="text" placeholder="Phone Number" required>
+			
+			<input type="text" placeholder="Status" required>
+
+            <button type="submit">Submit</button>
+
+        </form>
+        </table>
+
+    </section>
+
+    <section class="complaint-section">
+
+        <h2>Register Complaint</h2>
+
+        <form>
+
+            <input type="text" placeholder="Student Name" required>
+
+            <input type="text" placeholder="Room Number" required>
+
+            <textarea placeholder=" Write Complaint "></textarea>
+
+            <button type="submit">Submit</button>
+
+        </form>
+
+    </section>
+
+<section class="feedback-section">
+
+    <h2>Hostel Feedback Form</h2>
+
+    <form>
+
+        <input type="text" placeholder="Enter Your Name" required>
+
+        <input type="text" placeholder="Room Number" required>
+
+        <textarea placeholder="Write Your Feedback"></textarea>
+
+        <button type="submit">Submit Feedback</button>
+
+    </form>
+
+</section>
+
+    <footer>
+        <p> © DormHub USTM </p>
+    </footer>
+	
+	</div>
+
+<script>
+
+function showLogin() {
+    document.getElementById("loginForm").style.display = "block";
+    document.getElementById("registerForm").style.display = "none";
+}
+
+function showRegister() {
+    document.getElementById("loginForm").style.display = "none";
+    document.getElementById("registerForm").style.display = "block";
+}
+
+document.getElementById("loginForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    document.querySelector(".auth-container").style.display = "none";
+    document.getElementById("mainWebsite").style.display = "block";
+});
+
+document.getElementById("registerForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    alert("Registration Successful! Please Login.");
+    showLogin();
+});
+
+</script>
+
+</body>
+</html>
